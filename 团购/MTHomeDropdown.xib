@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTHomeDropdown">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-hv-81W" userLabel="从表">
+                    <rect key="frame" x="150" y="0.0" width="150" height="340"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="bqO-rJ-NnQ"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="KSA-MJ-Bar"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="J4n-T4-btG"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jEb-Ju-qz1" userLabel="主表">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="340"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="dXb-9W-w9o"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="izW-dJ-vgE"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="h4I-hv-81W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0qk-V1-wUJ"/>
+                <constraint firstItem="jEb-Ju-qz1" firstAttribute="width" secondItem="h4I-hv-81W" secondAttribute="width" id="0sT-1V-m02"/>
+                <constraint firstAttribute="bottom" secondItem="h4I-hv-81W" secondAttribute="bottom" id="N0I-nB-SPy"/>
+                <constraint firstItem="jEb-Ju-qz1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a12-GF-iXe"/>
+                <constraint firstAttribute="trailing" secondItem="h4I-hv-81W" secondAttribute="trailing" id="bUe-cC-Y7L"/>
+                <constraint firstItem="h4I-hv-81W" firstAttribute="leading" secondItem="jEb-Ju-qz1" secondAttribute="trailing" id="dbQ-5g-EB4"/>
+                <constraint firstAttribute="bottom" secondItem="jEb-Ju-qz1" secondAttribute="bottom" id="pYV-Ca-Zqu"/>
+                <constraint firstItem="jEb-Ju-qz1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vVo-O5-edB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="jEb-Ju-qz1" id="0uK-8g-rH2"/>
+                <outlet property="subTableView" destination="h4I-hv-81W" id="Rb7-zF-O9g"/>
+            </connections>
+            <point key="canvasLocation" x="384.5" y="244.5"/>
+        </view>
+    </objects>
+</document>

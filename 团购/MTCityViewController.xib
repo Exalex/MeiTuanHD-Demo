@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTCityViewController">
+            <connections>
+                <outlet property="cover" destination="rfL-A9-Yf6" id="Dy2-CF-GNb"/>
+                <outlet property="searchBar" destination="xit-fd-Ow9" id="5jN-TN-AFf"/>
+                <outlet property="tableView" destination="swC-nx-rUM" id="quq-Y5-d2r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="xit-fd-Ow9">
+                    <rect key="frame" x="15" y="15" width="570" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="KdW-gh-IqW"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ktv-sB-yWb"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="swC-nx-rUM">
+                    <rect key="frame" x="0.0" y="74" width="600" height="526"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yte-Pf-8ri"/>
+                        <outlet property="delegate" destination="-1" id="aa9-Cj-fkT"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-A9-Yf6" userLabel="遮盖">
+                    <rect key="frame" x="244" y="285" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0014599116160000001" green="0.0" blue="0.001219447502" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="cover:" destination="-1" eventType="touchUpInside" id="6Qg-NU-VgN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rfL-A9-Yf6" firstAttribute="top" secondItem="xit-fd-Ow9" secondAttribute="bottom" constant="15" id="4cF-SG-Pcq"/>
+                <constraint firstItem="rfL-A9-Yf6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5KH-Df-lXF"/>
+                <constraint firstAttribute="bottom" secondItem="swC-nx-rUM" secondAttribute="bottom" id="DIi-YJ-r4m"/>
+                <constraint firstAttribute="bottom" secondItem="rfL-A9-Yf6" secondAttribute="bottom" id="GOJ-ty-gmx"/>
+                <constraint firstAttribute="trailing" secondItem="swC-nx-rUM" secondAttribute="trailing" id="Jvy-9c-KEK"/>
+                <constraint firstItem="xit-fd-Ow9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="XOk-Qm-NOB"/>
+                <constraint firstAttribute="trailing" secondItem="rfL-A9-Yf6" secondAttribute="trailing" id="hvk-pg-Yce"/>
+                <constraint firstAttribute="trailing" secondItem="xit-fd-Ow9" secondAttribute="trailing" constant="15" id="i7X-pf-EX8"/>
+                <constraint firstItem="swC-nx-rUM" firstAttribute="top" secondItem="xit-fd-Ow9" secondAttribute="bottom" constant="15" id="jrt-xY-ed4"/>
+                <constraint firstItem="xit-fd-Ow9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="o86-Rb-6Sh"/>
+                <constraint firstItem="swC-nx-rUM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tsI-tx-DHK"/>
+            </constraints>
+            <point key="canvasLocation" x="303" y="217"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>
